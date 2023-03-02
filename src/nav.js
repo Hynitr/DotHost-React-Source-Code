@@ -17,7 +17,7 @@ const Navbar = () => {
                         <div className="navbar-nav justify-content-end flex-grow-1 px-5">
                             <a style={{ color: '#000 !important' }} className="nav-item pt-4 pt-lg-0 nav-link active" aria-current="page" href="#home" >Home</a>
                             <a style={{ color: '#000 !important' }} className="nav-item pt-4 pt-lg-0 nav-link" href="#hosting">Web Hosting</a>
-                            <a style={{ color: '#000 !important' }} className="nav-item pt-4 pt-lg-0 nav-link" href="./registerdomain">Register Domains</a> <a style={{ color: '#000 !important' }} className="nav-item pt-4 pt-lg-0 nav-link" target="_blank" rel="noreferrer" href="https://dothost.com.ng:2083">WordPress</a>
+                            <a style={{ color: '#000 !important' }} className="nav-item pt-4 pt-lg-0 nav-link" href="#domains">Register Domains</a> <a style={{ color: '#000 !important' }} className="nav-item pt-4 pt-lg-0 nav-link" target="_blank" rel="noreferrer" href="https://dothost.com.ng:2083">WordPress</a>
                             <a style={{ color: '#000 !important' }} className="nav-item pt-4 pt-lg-0 nav-link" target="_blank" rel="noreferrer" href="https://api.whatsapp.com/send?phone=2348102569402&text=I%20need%20help%20with%20your%20hosting%20platform">Support</a>
                            
                         </div>

@@ -28,7 +28,7 @@ const Footer = () => {
                       <div className="col-6 mt-4 d-none d-lg-block text-end">
                           <div className="row">
                             <div className="col-3">
-                               <a className="text-decoration-none text-dark" href="#domain"><h6>Domains</h6></a> 
+                               <a className="text-decoration-none text-dark" href="#domains"><h6>Domains</h6></a> 
                             </div>
                             <div className="col-3">
                                 <a className="text-decoration-none text-dark" href="#hosting"><h6>Hosting</h6></a> 
@@ -57,7 +57,7 @@ const Footer = () => {
                         </div>
                         
                         <div className="col-3">
-                            <a href="#domain" className="text-decoration-none text-dark">
+                            <a href="#domains" className="text-decoration-none text-dark">
                                 <img src={ domain } alt="Home" className="img-fluid img-responsive" />
                                 <p className='mb-0 pb-0'>Buy Domain</p>
                             </a>
