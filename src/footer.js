@@ -28,13 +28,13 @@ const Footer = () => {
                       <div className="col-6 mt-4 d-none d-lg-block text-end">
                           <div className="row">
                             <div className="col-3">
-                               <a className="text-decoration-none text-dark" href="./registerdomain"><h6>Domains</h6></a> 
+                               <a className="text-decoration-none text-dark" href="#domain"><h6>Domains</h6></a> 
                             </div>
                             <div className="col-3">
                                 <a className="text-decoration-none text-dark" href="#hosting"><h6>Hosting</h6></a> 
                             </div>
                             <div className="col-3">
-                                <a className="text-decoration-none text-dark" target="_blank" href="https://youtube.com/playlist?list=PLERLvzUF210VY9Cl8sZ0xvKQ2UO8R6CD1" rel="noreferrer"><h6>Tutorials</h6></a> 
+                                <a className="text-decoration-none text-dark" target="_blank" rel="noreferrer" href="https://dothost.com.ng:2083"><h6>WordPress</h6></a> 
                             </div>
                             <div className="col-3">
                                 <a className="text-decoration-none text-dark" href="./support"><h6>Support</h6></a> 
