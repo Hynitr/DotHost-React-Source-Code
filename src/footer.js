@@ -37,7 +37,7 @@ const Footer = () => {
                                 <a className="text-decoration-none text-dark" target="_blank" rel="noreferrer" href="https://dothost.com.ng:2083"><h6>WordPress</h6></a> 
                             </div>
                             <div className="col-3">
-                                <a className="text-decoration-none text-dark" href="./support"><h6>Support</h6></a> 
+                                <a className="text-decoration-none text-dark" target="_blank" rel="noreferrer" href="https://api.whatsapp.com/send?phone=2348102569402&text=I%20need%20help%20with%20your%20hosting%20platform"><h6>Support</h6></a> 
                             </div>
                           </div>
                       </div>
@@ -48,21 +48,31 @@ const Footer = () => {
             <section className="d-block d-lg-none fixed-bottom bg-white py-2 px-2 mobilenav">
                 <div className="container justify-content-center text-center m-auto mt-2">
                     <div className="row">
+                      
                         <div className="col-3">
-                            <img src={ hosting } alt="Home" className="img-fluid img-responsive" />
-                            <p className='mb-0 pb-0'>Hosting</p>
+                            <a href="#hosting" className="text-decoration-none text-dark">
+                                <img src={ hosting } alt="Home" className="img-fluid img-responsive" />
+                                <p className='mb-0 pb-0'>Hosting</p>
+                            </a>
+                        </div>
+                        
+                        <div className="col-3">
+                            <a href="#domain" className="text-decoration-none text-dark">
+                                <img src={ domain } alt="Home" className="img-fluid img-responsive" />
+                                <p className='mb-0 pb-0'>Buy Domain</p>
+                            </a>
                         </div>
                         <div className="col-3">
-                            <img src={ domain } alt="Home" className="img-fluid img-responsive" />
-                            <p className='mb-0 pb-0'>Buy Domain</p>
+                            <a target="_blank" rel="noreferrer" href="https://api.whatsapp.com/send?phone=2348102569402&text=I%20need%20help%20with%20your%20hosting%20platform" className="text-decoration-none text-dark">
+                                <img src={ phone } alt="Home" className="img-fluid img-responsive" />
+                                <p className='mb-0 pb-0'>Support</p>
+                            </a>
                         </div>
                         <div className="col-3">
-                            <img src={ phone } alt="Home" className="img-fluid img-responsive" />
-                            <p className='mb-0 pb-0'>Support</p>
-                        </div>
-                        <div className="col-3">
-                            <img src={ wordpress } alt="Home" className="img-fluid img-responsive" width="25" />
-                            <p className='mb-0 pb-0'>WordPress</p>
+                            <a target="_blank" rel="noreferrer" href="https://dothost.com.ng:2083" className="text-decoration-none text-dark">
+                                <img src={ wordpress } alt="Home" className="img-fluid img-responsive" width="25" />
+                                <p className='mb-0 pb-0'>WordPress</p>
+                            </a>
                         </div>
                     </div>
                 </div>
