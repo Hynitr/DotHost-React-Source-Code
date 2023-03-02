@@ -15,8 +15,8 @@ const Navbar = () => {
                     
                     <div className="offcanvas-body">
                         <div className="navbar-nav justify-content-end flex-grow-1 px-5">
-                            <a style={{ color: '#000 !important' }} className="nav-item pt-4 pt-lg-0 nav-link active" aria-current="page" href="./" >Home</a>
-                            <a style={{ color: '#000 !important' }} className="nav-item pt-4 pt-lg-0 nav-link" href="./hosting">Web Hosting</a>
+                            <a style={{ color: '#000 !important' }} className="nav-item pt-4 pt-lg-0 nav-link active" aria-current="page" href="#home" >Home</a>
+                            <a style={{ color: '#000 !important' }} className="nav-item pt-4 pt-lg-0 nav-link" href="#hosting">Web Hosting</a>
                             <a style={{ color: '#000 !important' }} className="nav-item pt-4 pt-lg-0 nav-link" href="./registerdomain">Register Domains</a>
                             <a style={{ color: '#000 !important' }} className="nav-item pt-4 pt-lg-0 nav-link" target="_blank" rel="noreferrer" href="https://youtube.com/playlist?list=PLERLvzUF210VY9Cl8sZ0xvKQ2UO8R6CD1">Tutorials</a>
                             <a style={{ color: '#000 !important' }} className="nav-item pt-4 pt-lg-0 nav-link" href="./support">Support</a>

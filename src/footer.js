@@ -1,6 +1,8 @@
 import footerlogo from './img/4.png';
-import homeicon from './img/icons/home-2.svg';
-import wordpress from './img/icons/3741719.png';
+import phone from './img/icons/call.svg';
+import domain from './img/icons/cloud-add.svg';
+import hosting from './img/icons/driver.svg';
+import wordpress from './img/icons/wordpress.svg';
 
 const Footer = () => {
     return ( 
@@ -47,16 +49,16 @@ const Footer = () => {
                 <div className="container justify-content-center text-center m-auto mt-2">
                     <div className="row">
                         <div className="col-3">
-                            <img src={ homeicon } alt="Home" className="img-fluid img-responsive" />
-                            <p className='mb-0 pb-0'>Home</p>
+                            <img src={ hosting } alt="Home" className="img-fluid img-responsive" />
+                            <p className='mb-0 pb-0'>Hosting</p>
                         </div>
                         <div className="col-3">
-                            <img src={ homeicon } alt="Home" className="img-fluid img-responsive" />
+                            <img src={ domain } alt="Home" className="img-fluid img-responsive" />
                             <p className='mb-0 pb-0'>Buy Domain</p>
                         </div>
                         <div className="col-3">
-                            <img src={ homeicon } alt="Home" className="img-fluid img-responsive" />
-                            <p className='mb-0 pb-0'>Hosting</p>
+                            <img src={ phone } alt="Home" className="img-fluid img-responsive" />
+                            <p className='mb-0 pb-0'>Support</p>
                         </div>
                         <div className="col-3">
                             <img src={ wordpress } alt="Home" className="img-fluid img-responsive" width="25" />
