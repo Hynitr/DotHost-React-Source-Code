@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import loader from './img/loading.gif';
+import { PaystackButton } from "react-paystack";
 
 
 const Domainchecker = () => {
@@ -10,6 +11,40 @@ const Domainchecker = () => {
     const [thisDomainName, setThisDomainName] = useState('');
     const [thisDomainPrice, setThisDomainPrice] = useState('');
     const [thisDomainPricePay, setThisDomainPricePay] = useState('');
+    const [paystackKeyLive, setPaystackKeyLive] = useState('');
+
+    const [email, setEmail] = useState('');
+    const [phone, setPhone] = useState('');
+    const [name, setName] = useState('');
+
+    const amount = thisDomainPricePay;           
+    const publicKey = paystackKeyLive;
+
+    const resetForm = () => {
+        setEmail('');
+        setName('');
+        setPhone('');
+      };
+    
+
+    const componentProps = {
+        email,
+        amount,
+        metadata: {
+          name,
+          phone,
+        },
+        publicKey,
+        text: 'Buy Now',
+        onSuccess: ({ reference }) => {
+          alert(
+            `Your purchase was successful! Transaction reference: ${reference}`
+          );
+          resetForm();
+        },
+        onClose: () => alert("Wait! You need this oil, don't go!!!!"),
+      };
+       
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -32,11 +67,13 @@ const Domainchecker = () => {
 
             const domainstatus= data[2];
             setThisDomainName(data[0]);
+            setPaystackKeyLive(data[4]);
 
             if(domainstatus === true) {
 
                 setThisDomainPrice(data[1]);
                 setThisDomainPricePay(data[3]);
+
                 setIsSuccessfull(true);
 
             } else {
@@ -106,28 +143,22 @@ const Domainchecker = () => {
                                     </div>
 
                                     <div className="modal-body justify-content-center text-center">
-                                        <form>
-                                            <div className="row mb-3">
-                                                <div className="col-12 mb-3">
-                                                    <input type="text" className="form-control" placeholder="First Name" id="first-name" required/>
-                                                    <input type='text' hidden/>
-                                                </div>
-                                                <div className="col-12">
-                                                    <input type="text" className="form-control" placeholder="Last Name" id="last-name" required/>
-                                                    <input type='text' hidden/>
-                                                </div>
-                                            </div>
-                                            <div className="col-12 mb-3">
-                                                <input type="email" className="form-control" placeholder="Email Address" id="email-address" required/>
+                                        <form id="paymentForm">
+                                        <div className="col-12 mb-3">
+                                                <input type="text" className="form-control" placeholder="Input full name" value={name} onChange={(e) => setName(e.target.value)} required/>
                                                 <input type="number" id="amount" value={thisDomainPricePay} onChange={(e) => setThisDomainPricePay(e.target.value)} hidden/>
                                             </div>
                                             <div className="col-12 mb-3">
-                                                <input type="number" className="form-control" placeholder="Phone Number" id="phone" required/>
+                                                <input type="email" className="form-control" placeholder="Email Address" value={email} onChange={(e) => setEmail(e.target.value)} id="email-address" required/>
+                                                <input type="number" id="amount" value={thisDomainPricePay} onChange={(e) => setThisDomainPricePay(e.target.value)} hidden/>
+                                            </div>
+                                            <div className="col-12 mb-3">
+                                                <input type="number" className="form-control" placeholder="Phone Number" id="phone" value={phone} onChange={(e) => setPhone(e.target.value)} required/>
                                                 <input type="text" className="form-control" value={thisDomainName} onChange={(e) => setThisDomainName(e.target.value)} id="domain" hidden/>
                                             </div>
                                             <div className="modal-footer">
                                                 <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                <button type="submit" className="btn btn-dark">Make Payment</button>
+                                                <PaystackButton {...componentProps} className='btn btn-dark' />
                                                 </div>
                                         </form>
                                     </div>
