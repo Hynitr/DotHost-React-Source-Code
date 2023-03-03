@@ -3,7 +3,8 @@ import phone from './img/icons/call.svg';
 import domain from './img/icons/cloud-add.svg';
 import hosting from './img/icons/driver.svg';
 import wordpress from './img/icons/wordpress.svg';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 
 const Footer = () => {
     return ( 

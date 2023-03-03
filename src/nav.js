@@ -1,5 +1,5 @@
 import logo from './img/4.png';
-import { Link } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 
 const Navbar = () => {
     return ( 
