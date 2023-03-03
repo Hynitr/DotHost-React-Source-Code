@@ -14,7 +14,7 @@ const Error404 = () => {
 
                     <div className="col-lg-6 col-12" id="domains">
                         <h1 className="mt-3 pt-lg-5 mt-lg-3 display-3 mb-4">Not<span style={{color: '#7ec3f7'}}> Found</span></h1>
-                        <p className="mb-3"> The link you are trying to access can't be found. Kindly check the link and try-again</p>
+                        <p className="mb-3">The URL you are attempting to access cannot be found. Please verify the URL and attempt to access it again.</p>
                     
                         <Link to="/" rel="noreferrer"><button className="btn btn-dark px-5 py-3 mt-4 mb-5 rounded-pill"> Go to HomePage</button></Link>
                     
