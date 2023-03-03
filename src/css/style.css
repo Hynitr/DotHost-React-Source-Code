@@ -91,6 +91,13 @@
   .was-validated :invalid {
     border-color: #dc3545;
   }
+
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
   
   
   #home {
@@ -104,6 +111,15 @@
         position: relative;
     
     }
+    .mldl form input:first-child{
+      border: 2px solid #7ec3f7 ;
+      outline: none;
+      border-radius: 10px;
+  }
+     .mldl form input:last-child{
+      outline: none;
+      border: none !important;
+  }
     .search form input:first-child{
         display: inline-block;
         width: 100%;
