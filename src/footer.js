@@ -3,6 +3,7 @@ import phone from './img/icons/call.svg';
 import domain from './img/icons/cloud-add.svg';
 import hosting from './img/icons/driver.svg';
 import wordpress from './img/icons/wordpress.svg';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return ( 
@@ -28,10 +29,10 @@ const Footer = () => {
                       <div className="col-6 mt-4 d-none d-lg-block text-end">
                           <div className="row">
                             <div className="col-3">
-                               <a className="text-decoration-none text-dark" href="#domains"><h6>Domains</h6></a> 
+                               <Link className="text-decoration-none text-dark" to="/#domains"><h6>Domains</h6></Link> 
                             </div>
                             <div className="col-3">
-                                <a className="text-decoration-none text-dark" href="#hosting"><h6>Hosting</h6></a> 
+                                <Link className="text-decoration-none text-dark" to="/#hosting"><h6>Hosting</h6></Link> 
                             </div>
                             <div className="col-3">
                                 <a className="text-decoration-none text-dark" target="_blank" rel="noreferrer" href="https://dothost.com.ng:2083"><h6>WordPress</h6></a> 
@@ -50,17 +51,17 @@ const Footer = () => {
                     <div className="row">
                       
                         <div className="col-3">
-                            <a href="#hosting" className="text-decoration-none text-dark">
+                            <Link to="/#hosting" className="text-decoration-none text-dark">
                                 <img src={ hosting } alt="Home" className="img-fluid img-responsive" />
                                 <p className='mb-0 pb-0'>Hosting</p>
-                            </a>
+                            </Link>
                         </div>
                         
                         <div className="col-3">
-                            <a href="#domains" className="text-decoration-none text-dark">
+                            <Link to="/#domains" className="text-decoration-none text-dark">
                                 <img src={ domain } alt="Home" className="img-fluid img-responsive" />
                                 <p className='mb-0 pb-0'>Buy Domain</p>
-                            </a>
+                            </Link>
                         </div>
                         <div className="col-3">
                             <a target="_blank" rel="noreferrer" href="https://api.whatsapp.com/send?phone=2348102569402&text=I%20need%20help%20with%20your%20hosting%20platform" className="text-decoration-none text-dark">

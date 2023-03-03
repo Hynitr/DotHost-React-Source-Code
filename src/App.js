@@ -18,7 +18,6 @@ function App() {
           <Switch>
             <Route exact path="/">
               <Homepage />
-              <Footer/>
             </Route>
             <Route exact path="/privacy">
               <Privacy/>
@@ -34,6 +33,7 @@ function App() {
             </Route>
           </Switch>
         </div>
+        <Footer/>
       </div>
     </Router>
   );
