@@ -1,4 +1,4 @@
-import successgif from './img/success.gif';
+import error404error from './img/404.gif';
 
 const Error404 = () => {
 
@@ -8,7 +8,7 @@ const Error404 = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6 pt-lg-5 mt-lg-3 d-block d-lg-none d-md-none">
-                        <img src={ successgif } alt="DotHost" className="img-fluid"/>
+                        <img src={ error404error } alt="DotHost" className="img-fluid"/>
                     </div>
 
                     <div className="col-lg-6 col-12" id="domains">
@@ -19,7 +19,7 @@ const Error404 = () => {
                     
                     </div>
                     <div className="col-lg-6 pt-lg-5 mt-lg-3 d-none d-lg-block d-md-block">
-                        <img src={ successgif } alt="DotHost" className="img-fluid"/>
+                        <img src={ error404error } alt="DotHost" className="img-fluid"/>
                     </div>
 
                 </div>
