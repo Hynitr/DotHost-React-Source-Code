@@ -35,7 +35,7 @@ const Homepage = () => {
             
             </div>
 
-            <div className="mb-5 pb-5 mt-5" id="about">
+            <div className="mb-5 pb-5 mt-5 pt-lg-0 pt-4" id="about">
             <div className="container">
                 <div className="col-12">
                     <h2 className="display-3 mb-4 pt-4 text-center">Hosting with us is easy! 😍</h2>
