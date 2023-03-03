@@ -61,6 +61,13 @@
   
   }
 
+  .mobilenav {
+
+    background-color: #dff3ff !important;
+    border-radius: 20px 20px 0px 0px;
+    box-shadow: rgba(126,195,247, 0.2) 0px 8px 24px;
+  }
+
   .mobilenav p {
 
     font-size: 12px;

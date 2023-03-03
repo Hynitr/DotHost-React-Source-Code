@@ -47,7 +47,7 @@ const Footer = () => {
                     </div>
             </section>
 
-            <section className="d-block d-lg-none fixed-bottom bg-white py-2 px-2 mobilenav">
+            <section className="d-block d-lg-none fixed-bottom py-2 px-2 mobilenav">
                 <div className="container justify-content-center text-center m-auto mt-2">
                     <div className="row">
                       
