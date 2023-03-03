@@ -13,25 +13,15 @@ const Homepage = () => {
                                 
                                     <div className="col-lg-6 col-12" id="domains">
                                         <h1 className="mt-4 pt-lg-5 mt-lg-3 display-3 mb-4">Hosting your website takes <span style={{color: '#7ec3f7'}}>five minutes!</span></h1>
-                                        <p className="mb-3">With our hassle-free hosting and easy-to-use control panel, you can have your website online and ready to use within just five minutes. 🚀😍</p>
+                                        <p className="mb-3">With our hassle-free hosting and easy-to-use control panel, you can have your website online and ready to use within five minutes. 🚀😍</p>
                                     
                                         <div className="col-lg-6 col-md-12 mobileviewhide d-block d-lg-none pt-lg-5 mt-lg-3 MT-4">
                                             <img src={ homepicture } className="img-fluid" alt="DotHost" />
                                         </div>
                                 
                                     
-                                        <div className="search">
+                                       
                                             <Domainchecker/>
-                                            <div className="domain-price-help mt-4 mb-5 col-12 d-flex align-items-center justify-content-between col-lg-6 text-secondary">
-                                                <p className="text-center">.com</p>
-                                                <p className="text-center">.com.ng</p>
-                                                <p className="text-center">.org</p>
-                                                <p className="text-center">.net</p>
-                                                <p className="text-center">.edu</p>
-                                                <p className="text-center">.xyz</p>
-                                                <p className="text-center">.co</p>
-                                            </div>
-                                        </div>
 
 
                                     </div>  
