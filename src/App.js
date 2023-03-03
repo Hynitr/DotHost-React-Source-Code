@@ -6,35 +6,35 @@ import Success from './success';
 import Termofuse from './terms-of-use';
 import Privacy from './privacy';
 import Error404 from './error404';
-import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
 
-    <Router>
-       <div className="App">
+   <Router>
+      <div className="App">
       <Navbar/>
-        <div className='Content'>
+        <div className="content">
           <Switch>
-            <Route path="/">
-              <Homepage/>
+            <Route exact path="/">
+              <Homepage />
+              <Footer/>
             </Route>
-            <Route path="/success">
+            <Route exact path="/privacy">
+              <Privacy/>
+            </Route>
+            <Route exact path="/success">
               <Success/>
             </Route>
-            <Route path="/terms-of-use">
+            <Route exact path="/terms-of-use">
               <Termofuse/>
             </Route>
-            <Route path="/privacy">
-            <Privacy/>
-            </Route>
-            <Route path="*">
-              <Error404/>
+            <Route exact path="*">
+              <Error404 />
             </Route>
           </Switch>
-      <Footer/>
-    </div>
-    </div>
+        </div>
+      </div>
     </Router>
   );
 }
