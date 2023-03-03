@@ -25,9 +25,6 @@ function App() {
             <Route exact path="/success">
               <Success/>
             </Route>
-            <Route exact path="/#hosting">
-              <Homepage/>
-            </Route>
             <Route exact path="/terms-of-use">
               <Termofuse/>
             </Route>
