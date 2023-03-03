@@ -2,15 +2,40 @@ import './css/style.css';
 import Navbar from './nav';
 import Homepage from './home';
 import Footer from './footer';
-import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import Success from './success';
+import Termofuse from './terms-of-use';
+import Privacy from './privacy';
+import Error404 from './error404';
+import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
+
+    <Router>
+       <div className="App">
       <Navbar/>
-      <Homepage/>
+        <div className='Content'>
+          <Switch>
+            <Route path="/">
+              <Homepage/>
+            </Route>
+            <Route path="/success">
+              <Success/>
+            </Route>
+            <Route path="/terms-of-use">
+              <Termofuse/>
+            </Route>
+            <Route path="/privacy">
+            <Privacy/>
+            </Route>
+            <Route path="*">
+              <Error404/>
+            </Route>
+          </Switch>
       <Footer/>
     </div>
+    </div>
+    </Router>
   );
 }
 

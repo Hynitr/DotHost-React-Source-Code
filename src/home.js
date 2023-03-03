@@ -331,7 +331,7 @@ const Homepage = () => {
                             <p className="mb-1">Whenever you need our assistance, we are more than willing to listen to you and address your needs in any timely manner </p>
                         
                         
-                            <a href="./support"><button className="btn btn-dark px-5 py-3 mt-4 mb-5 rounded-pill"> Talk to a support member</button></a>
+                            <a href="https://api.whatsapp.com/send?phone=2348102569402&text=I%20just%20made%20payments%20on%20DotHost"><button className="btn btn-dark px-5 py-3 mt-4 mb-5 rounded-pill"> Talk to a support member</button></a>
                             
                             
                         </div>
