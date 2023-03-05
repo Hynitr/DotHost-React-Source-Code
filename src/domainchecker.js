@@ -3,7 +3,7 @@ import loader from './img/loading.gif';
 import { PaystackButton } from "react-paystack";
 import axios from 'axios';
 import { useHistory } from "react-router-dom";
-import { hideModalBackdrop } from 'my-modal-library';
+import { Modal } from 'react-bootstrap';
 
 
 const Domainchecker = () => {
@@ -17,6 +17,16 @@ const Domainchecker = () => {
     const [thisDomainPrice, setThisDomainPrice] = useState('');
     const [thisDomainPricePay, setThisDomainPricePay] = useState('');
     const [paystackKeyLive, setPaystackKeyLive] = useState('');
+
+    const [showModal, setShowModal] = useState(false);
+
+    const handleShowModal = () => {
+      setShowModal(true);
+    }
+  
+    const handleCloseModal = () => {
+      setShowModal(false);
+    }
 
 
     const [email, setEmail] = useState('');
@@ -64,6 +74,8 @@ const Domainchecker = () => {
         publicKey,
         text: 'Buy Now',
         onSuccess: ({ reference }) => {
+          
+          handleCloseModal();
 
           history.push("/success");
 
@@ -84,7 +96,7 @@ const Domainchecker = () => {
         setIsPending(true);
         setIsSuccessfull(false);
 
-        fetch('http://localhost/hynitr/dothost/api/', {
+        fetch('https://api.dothost.com.ng/index.php', {
             method: 'POST',
             body: JSON.stringify(getdomain)
 
@@ -155,69 +167,59 @@ const Domainchecker = () => {
                       <h6 className="px-3 pt-2 text-ce">NGN{ thisDomainPrice }</h6>
                     </div>
                     <div className="col-12 col-lg-3 col-md-4 text-center mb-3 mb-lg-0">
-                      <button type="button" className="btn btn-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Buy Now</button>
+                      <button type="button" className="btn btn-dark" onClick={handleShowModal}>Buy Now</button>
                     </div>
                     
                   </div>
                   </div>
 
-
-                        <div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                            <div className="modal-dialog modal-dialog-centered">
-                                <div className="modal-content">
-                                    
-                                        <div className="modal-header">
-                                            <h1 className="modal-title fs-5" id="staticBackdropLabel">Buy "{thisDomainName}" Domain </h1>
-                                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-
-                                        <div className="modal-body justify-content-center text-center">
-
-                                        <div className="checkout">
-                                          <div className="checkout-form">
-                                            <div className="checkout-field">
-                                              <input
-                                                type="text"
-                                                id="name"
-                                                className='form-control mb-3'
-                                                placeholder="Please input your full name"
-                                                value={name}
-                                                onChange={(e) => setName(e.target.value)}
-                                              />
-                                            </div>
-                                            <div className="checkout-field">
-                                              <input
-                                                type="text"
-                                                id="email"
-                                                className='form-control mb-3'
-                                                placeholder="Please input your email address"
-                                                value={email}
-                                                onChange={(e) => setEmail(e.target.value)}
-                                              />
-                                            </div>
-                                            <div className="checkout-field">
-                                              <input
-                                                type="text"
-                                                id="phone"
-                                                className='form-control mb-3'
-                                                placeholder="Please input your phone number"
-                                                value={phone}
-                                                onChange={(e) => setPhone(e.target.value)}
-                                              />
-                                            </div>
-                                            <div className="modal-footer">
-                                              <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                              <PaystackButton className='btn btn-dark paystack-button' {...componentProps} />
-                                            </div>
-                                          
-                                          </div>
-                                        </div>
-
-                                        </div>
-                                    
+                  
+                        <Modal show={showModal} onHide={handleCloseModal} backdrop="static" dialogClassName="modal-dialog modal-dialog-centered">
+                            <Modal.Header closeButton>
+                                <Modal.Title className='fw-bold'>Buy "{thisDomainName}" Domain</Modal.Title>
+                            </Modal.Header>
+                            <Modal.Body>
+                            <div className="checkout">
+                              <div className="checkout-form">
+                                <div className="checkout-field">
+                                  <input
+                                    type="text"
+                                    id="name"
+                                    className='form-control mb-3'
+                                    placeholder="Please input your full name"
+                                    value={name}
+                                    onChange={(e) => setName(e.target.value)}
+                                  />
                                 </div>
+                                <div className="checkout-field">
+                                  <input
+                                    type="text"
+                                    id="email"
+                                    className='form-control mb-3'
+                                    placeholder="Please input your email address"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                  />
+                                </div>
+                                <div className="checkout-field">
+                                  <input
+                                    type="text"
+                                    id="phone"
+                                    className='form-control mb-3'
+                                    placeholder="Please input your phone number"
+                                    value={phone}
+                                    onChange={(e) => setPhone(e.target.value)}
+                                  />
+                                </div>
+                                
+                              </div>
                             </div>
-                        </div>
+                            </Modal.Body>
+                            <Modal.Footer>
+                                <button type="button" className="btn btn-secondary" onClick={handleCloseModal}>Close</button>
+                                <PaystackButton className='btn btn-dark paystack-button' {...componentProps} />
+                            </Modal.Footer>
+                        </Modal>
 
                     </div>
                     
