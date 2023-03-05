@@ -98,6 +98,11 @@
     margin: 0;
   }
 
+  #success .modal-backdrop .fade .show{
+      opacity: 0 !important;
+      pointer-events: auto !important;
+      background-color: #EA8EE0;
+  }
   
   
   #home {
